@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<%= data.site.lang %>"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="<%= data.site.lang %>"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="<%= data.site.lang %>"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<%= data.site.lang %>"> <!--<![endif]-->
+  <head>
+    <title><%= custom_or_default_content(:title) %></title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= custom_or_default_content(:description) %>" />
+    <meta name="keywords" content="<%= custom_or_default_content(:keywords) %>">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.jQuery || document.write('<script src="/javascripts/html5.js"><\/script>')</script>
+    <![endif]-->
+    <%= stylesheet_link_tag "site.css" %>
+    <%= favicon_tag '/images/favicon.ico' %>
+    <%= yield_content :style %>
+  </head>
+  
+  <body>
+
+    <header role="banner">
+      <%= partial "layouts/header" %>
+    </header>
+
+    <div class="main" role="main">
+      <%= yield %>
+    </div>
+
+    <footer role="contentinfo">
+      <%= partial "layouts/footer" %>
+    </footer>
+
+  <%= javascript_include_tag 'jquery-1.7.2.min', 'application' %>
+  <%= yield_content :script %>
+  <!-- Asynchronous Google Analytics snippet.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','<%= data.site.google_analytics_id %>'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+  </body>
+</html>

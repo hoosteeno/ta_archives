@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <!--[if lt IE 7]><html class="no-js ie ie67 ie6" lang="en"><![endif]-->
+    <!--[if IE 7]><html class="no-js ie ie67 ie7" lang="en"><![endif]-->
+    <!--[if IE 8]><html class="no-js ie ie8" lang="en"><![endif]-->
+    <!--[if gte IE 9]><html class="no-js ie ie9" lang="en"><![endif]-->
+    <!--[if !IE]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+  <title><%= custom_or_default_content(:title) %></title>
+  <meta name="description" content="<%= custom_or_default_content(:description) %>" />
+  <meta name="keywords" content="<%= custom_or_default_content(:keywords) %>">
+  <!-- Open Graph Meta Data -->
+  <!-- Open Graph Type Data -->
+  <meta content='The Office of Adolescent Health, U.S. Department of Health and Human Services' property='og:title' />
+  <meta content='government' property='og:type' />
+  <meta content='http://www.hhs.gov/ash/oah/' property='og:url' />
+  <meta content='The Office of Adolescent Health (OAH) coordinates adolescent health programs and initiatives across the U.S. Department of Health and Human Services related to adolescent health promotion and disease prevention' property='og:description' />
+  <meta content="http://www.hhs.gov/ash/oah/images/fbpreview.jpg" property='og:image' />
+  <meta content='Office of Adolescent Health' property='og:site_name' />
+  <meta content='USER_ID' property='fb:admins' />
+  <link href="/images/fbpreview.jpg" rel='image_src' />
+  <!-- Open Graph Contact Data -->
+  <meta content='39.067947' property='og:latitude' />
+  <meta content='-77.156124' property='og:longitude' />
+  <meta content='1101 Wootton Parkway, Suite 700' property='og:street-address' />
+  <meta content='Rockville' property='og:locality' />
+  <meta content='MD' property='og:region' />
+  <meta content='20852' property='og:postal-code' />
+  <meta content='USA' property='og:country-name' />
+
+  <link href="http://www.hhs.gov/ash/oah/images/oah_sys_images/favicon.ico" rel="ICON" />
+  <link href="http://www.hhs.gov/ash/oah/images/oah_sys_images/favicon.ico" rel="SHORTCUT ICON" />
+  <link href="http://www.hhs.gov/ash/oah/css/site.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="http://www.hhs.gov/ash/oah/css/supplemental.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <!-- IE Stylesheets -->
+  <script src='http://use.typekit.com/isn3hpd.js' type='text/javascript'></script>
+  <script type='text/javascript'>
+    //<![CDATA[
+      try{Typekit.load();}catch(e){}
+    //]]>
+  </script>
+    <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.ti-utilities.debug.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/jquery-ui.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.formalize.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/modernizr-2.0.6.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.ti.rotator-0.2.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.jcarousellite.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/ti.site.js" type="text/javascript"></script>
+  <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.ti-interstitial.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.hhs.gov/javascript/gatc.js"></script>
+  <script type="text/javascript" src="http://www.hhs.gov/javascript/gaaddons.min.js"></script>
+  <script type="text/javascript" src="http://www.hhs.gov/javascript/tynt.js"></script>
+  
+    
+    
+    
+      <script src="http://www.hhs.gov/ash/oah/javascripts/jquery.ti-twitter.js" type="text/javascript"></script>
+  <style type="text/css">.entry-content a { text-decoration: underline; }</style>
+
+
+  <%= yield_content :style %>
+</head>
+
+<body class="full content">
+
+  <div id='wrapper'>
+
+    <%= partial "header" %>
+
+    <div id="content">
+      <div class="section">
+        <h1>Initiatives</h1>
+      </div>
+      <div id='main' role='main'>
+        <div class='article' role='article'>
+          <%= yield %>
+        </div>
+      </div>
+    </div><!-- eo #content -->
+
+    <%= partial "footer" %>
+
+  </div><!-- eo #wrapper -->
+
+  <%= partial "ribbon_etc" %>
+
+  <%= javascript_include_tag 'footer.js' %>
+  <%= yield_content :script %>
+
+</body>
+</html>

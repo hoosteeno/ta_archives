@@ -1,0 +1,122 @@
+
+    <div id="header" role="banner">
+      <h1 id='branding'>
+        <a href='/ash/oah/' title='Office of Adolescent Health | Home'><%= data.site.title %></a>
+      </h1>
+    </div><!-- eo #header -->
+
+
+    <form action='http://search.hhs.gov/search' id='search' method='GET' role='search'>
+      <ol>
+        <li class='text'>
+          <label for='query'>Search</label>
+          <input id='query' name='q' placeholder='Search' type='search' />
+        </li>
+        <li class='button'>
+          <!--
+            Hidden inputs here
+            don't forget to update the cx value per site
+          -->
+      <input name='ie' type='hidden' value='UTF-8' />
+      <input name="ud" type="hidden" value="1" />
+      <input name="sort" type="hidden" value="date:D:L:d1" />
+      <input name="output" type="hidden" value="xml_no_dtd" />
+      <input name="ie" type="hidden" value="UTF-8" />
+      <input name="oe" type="hidden" value="UTF-8" />
+      <input name="lr" type="hidden" value="lang_en" />
+      <input name="client" type="hidden" value="oah" />
+      <input name="site" type="hidden" value="oah" />
+      <input name="proxystylesheet" type="hidden" value="oah" />      
+      <input name="proxyreload" type="hidden" value="1" />      
+          <button type='Submit'>Go</button>
+        </li>
+      </ol>
+    </form>
+
+    <div class='skip'>
+      <a href='#content' rel='nofollow' title='Skip Navigation'>Skip Navigation</a>
+    </div>
+
+    <div id='nav' role='navigation'>
+      <ul>
+        <li id='nav-home'>
+          <a href='/ash/oah/'>Home</a>
+        </li>
+        <li id='nav-about'>
+          <a class='past' href='/ash/oah/about-us/'>About Us</a>
+      <div class="secondary">
+      <ul>
+          <li><a href="http://www.hhs.gov/ash/oah/about-us/leadership.html">Leadership</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/about-us/employment.html">Employment</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/about-us/contact.html">Contact Us</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/about-us/visitor-info.html">Visitor Information</a></li>      
+      </ul>
+      </div>
+        </li>
+        <li id='nav-initiatives'>
+          <a class='current' href='/ash/oah/oah-initiatives/'>OAH Initiatives</a>
+      <div class="secondary">
+      <ul>
+          <li><a href="http://www.hhs.gov/ash/oah/oah-initiatives/paf">Pregnancy Assistance Fund</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/oah-initiatives/tpp">Teen Pregnancy Prevention</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/oah-initiatives/national-resource-center.html">National Resource Center for HIV/AIDS Prevention Among Adolescents</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/oah-initiatives/ta/">Technical Assistance</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/current-grantees.html">Current Grantees</a></li> 
+      </ul>
+      </div>
+        </li>
+        <li id='nav-topic'>
+          <a class='past' href='/ash/oah/adolescent-health-topics/'>Adolescent Health Topics</a>
+      <div class="secondary">
+      <ul>
+        <li><a href="http://www.hhs.gov/ash/oah/adolescent-health-topics/reproductive-health/">Reproductive Health</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/adolescent-health-topics/mental-health/">Mental Health</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/adolescent-health-topics/physical-health-and-nutrition/">Physical Health and Nutrition</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/adolescent-health-topics/substance-abuse/">Substance Abuse</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/adolescent-health-topics/healthy-relationships/">Healthy Relationships</a></li>
+      </ul>
+      </div>
+        </li>
+        <li id='nav-news'>
+          <a class='past' href='/ash/oah/news/'>News</a>
+      <div class="secondary">
+      <ul>
+          <li><a href="http://www.hhs.gov/ash/oah/news/e-updates">E-Updates</a></li>
+            <li><a href="http://www.hhs.gov/ash/oah/news/health-awareness-months.html">Health Awareness Months</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/news/rss/across-hhs.html">News in Adolescent Health</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/news/press-releases/">Press Releases</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/news/webinars.html">Webinars</a></li>
+      </ul>
+      </div>
+        </li>
+        <li id='nav-resources'>
+          <a class='past' href='/ash/oah/resources-and-publications/'>Resources &amp; Publications</a>
+      <div class="secondary">
+      <ul>
+          <li><a href="http://www.hhs.gov/ash/oah/resources-and-publications/social-media">Adolescent Health Social Media</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/news/e-updates">E-Updates</a></li>
+            <li><a href="http://www.hhs.gov/ash/oah/oah-initiatives/tpp/tpp-database.html">Evidence-Based Programs</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/resources-and-publications/facts/">National and State Facts</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/resources-and-publications/publications">Publications by Topic</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/resources-and-publications/info">Need Information?</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/resources-and-publications/related-initiatives">Related Federal Initiatives</a></li>
+      </ul>
+      </div>
+        </li>
+        <li id='nav-grants'>
+          <a class='past' href='/ash/oah/grants/'>Grants</a>
+      <div class="secondary">
+      <ul>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/open-grants.html">Open Grants</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/closed-grants.html">Closed Grants</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/obtain-grant.html">How to obtain a Grant</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/grant-reviewers.html">Grant Reviewers</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/forms-reference.html">Forms & References</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/news/webinars.html">Technical Assistance</a></li>
+          <li><a href="http://www.hhs.gov/ash/oah/grants/current-grantees.html">Current Grantees</a></li>
+          <li><a href="http://grants.gov">Other Federal Funding Opportunities</a></li>
+      </ul>
+      </div> 
+       </li>
+      </ul>
+    </div><!-- eo #nav -->
