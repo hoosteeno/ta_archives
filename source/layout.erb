@@ -75,7 +75,23 @@
       </div>
       <div id='main' role='main'>
         <div class='article' role='article'>
-          <%= yield %>
+          <div class="hgroup">
+            <h1 class="tk-proxima-nova"><%= data.site.title %></h1>
+          </div>
+
+          <div class="entry-content">
+
+            <!-- 
+            BELOW is dojo4-provided content; ABOVE is Trilogy template content
+            -->
+            <%= stylesheet_link_tag 'dojo4' %>
+            <%= yield %>
+            <%= javascript_include_tag 'flowplayer/flowplayer-3.2.11.min.js', 'application.js' %>
+            <!-- 
+            ABOVE is dojo4-provided content; BELOW is Trilogy template content
+            -->
+
+          </div><!-- eo .entry-content -->
         </div>
       </div>
     </div><!-- eo #content -->
