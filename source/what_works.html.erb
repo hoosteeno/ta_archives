@@ -1,3 +1,23 @@
+---
+
+segments:
+  -
+    description: Welcoming remarks from the Office of the Assistant Secretary for Health, Office of Population Affairs, and Office of Adolescent Pregnancy Programs.
+    program: 
+      - | <strong>Wanda K. Jones</strong>, Dr.P.H.<br />
+        Principal Deputy Assistant Secretary for Health, U.S. Department of Health and Human Services (HHS)<br />
+        <a href="docs/welcome_arichmondscott.pdf">Welcome</a> (slides)
+      - |
+        <strong>Alicia Richmond Scott</strong>, M.S.W.<br />
+        Director, Office of Adolescent Pregnancy Programs, Office of Population Affairs
+      - |
+        <strong>Reesa Webb</strong>, M.S. (Symposium Moderator)<br />
+        Project Director, JSI Research &amp; Training Institute, Inc.
+
+    speaker_bios_url: docs/welcome_speaker_bios.pdf
+
+---
+
 <% base_url = "http://ta-archives.s3-website-us-east-1.amazonaws.com/assets/promoting_what_works_symposium/" %>
 
     <h2>Promoting What Works: A Symposium of Approaches for Supporting Pregnant and Parenting Adolescents</h2>
@@ -10,41 +30,39 @@
     <li><a href="<%= base_url %>docs/pww_agenda.pdf">'Promoting What Works' Agenda</a></li>
     <li><a href="<%= base_url %>docs/pww_program.pdf">'Promoting What Works' Program</a></li>
     </ul>
+    
+    <% if current_page.data.segments %>
+    <% current_page.data.segments.each do |segment| %>
 
+      <article class="segment row-fluid">
+        <h3><%= segment.title %></h3>
 
-    <article class="segment row-fluid">
-      <h3>Welcome</h3>
+        <div class="segment-text span7">
 
-      <div class="segment-text span7">
+          <p><%= segment.description %></p>
 
-        <p>Welcoming remarks from the Office of the Assistant Secretary for Health, Office of Population Affairs, and Office of Adolescent Pregnancy Programs.</p>
+          <ul class="program">
+            <% segment.program.each do |item| %>     
+              <li>
+                <%= item %>
+              </li>
+            <% end %>
+          </ul><!-- eo .program -->
 
-        <ul class="program">
+          <a class="bios" href="<%= base_url %><%= segment.speaker_bios_url %>">Speaker Bios</a>
 
-          <li><strong>Wanda K. Jones</strong>, Dr.P.H.<br />
-            Principal Deputy Assistant Secretary for Health, U.S. Department of Health and Human Services (HHS)<br />
-            <a href="<%= base_url %>docs/welcome_arichmondscott.pdf">Welcome</a> (slides)
-          </li>
-          <li><strong>Alicia Richmond Scott</strong>, M.S.W.<br />
-            Director, Office of Adolescent Pregnancy Programs, Office of Population Affairs
-          </li>
-          <li><strong>Reesa Webb</strong>, M.S. (Symposium Moderator)<br />
-            Project Director, JSI Research &amp; Training Institute, Inc.
-          </li>
+        </div><!-- eo .segment-text -->
 
-        </ul><!-- eo .program -->
+        <div class="segment-video span4">
+          <a class="player" title="Play Video" href="<%= base_url %>videos/segment_1-1280x720.flv"><img src="/images/play.jpg" alt="Play Video"/></a>
+          <a href="<%= base_url %>docs/welcome_transcript.pdf">Video Transcript</a>
+        </div><!-- eo .segment-video -->
+      </article><!-- eo .segment -->
 
-        <a class="bios" href="<%= base_url %>docs/welcome_speaker_bios.pdf">Speaker Bios</a>
+      <p class="backtotop"><a href="#">Back to top</a></p>
+    <% end %>
+    <% end %>
 
-      </div><!-- eo .segment-text -->
-
-      <div class="segment-video span4">
-        <a class="player" title="Play Video" href="<%= base_url %>videos/segment_1-1280x720.flv"><img src="/images/play.jpg" alt="Play Video"/></a>
-        <a href="<%= base_url %>docs/welcome_transcript.pdf">Video Transcript</a>
-      </div><!-- eo .segment-video -->
-    </article><!-- eo .segment -->
-
-    <p class="backtotop"><a href="#">Back to top</a></p>
       
 
 State of the Field: Adolescent Pregnancy Programming
