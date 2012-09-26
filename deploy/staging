@@ -1,0 +1,3 @@
+#! /bin/sh
+
+middleman build && rsync -avz ./build/* /Volumes/oah_archived_ta

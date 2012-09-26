@@ -1,19 +1,66 @@
+---
+webinars:
+  -
+    title: How to Get Articles Published in Scholarly Journals
+    author: Bruce Thyer
+    date: January 30, 2008
+    asset: 
+      - | 
+        <a href="%{base_url}20080130_publishing_articles/bruce_thyer_transcripts.pdf">Transcript</a>
+      - | 
+        <a href="%{base_url}20080130_publishing_articles/jan08_conference_call_bthyer.mp3">Audio</a>
+      - | 
+        <a href="%{base_url}20080130_publishing_articles/publishing_articles_bthyer.pdf">Slides</a>
+  -
+    title: "Parenting Styles: Discussing Abstinence"
+    author: Eva Kasten
+    date: February 28, 2008
+    asset: 
+      - | 
+        <a href="%{base_url}20080228_discussing_abstinence/eva_kasten_transcripts.final.pdf">Transcript</a>
+      - | 
+        <a href="%{base_url}20080228_discussing_abstinence/audio_recording_feb08_net_conf.mp3">Audio</a>
+---
 
-        <div class="hgroup">
-          <h1 class="tk-proxima-nova"><%= data.site.title %></h1>
-        </div>
-
-        <div class="entry-content">
-
-        <!-- 
-        BELOW is dojo4-provided content; ABOVE is Trilogy template content
-        -->
-
-        <%= javascript_include_tag 'application' %>
+<% 
+  base_url = "http://ta-archives.s3-website-us-east-1.amazonaws.com/assets/" 
+%>
 
 
-        <!-- 
-        ABOVE is dojo4-provided content; BELOW is Trilogy template content
-        -->
+    <section class="row-fluid">
+      <h2>Symposia</h2>
+      <article>
+        <h3><a href="/what_works">Promoting What Works: A Symposium of Approaches for Supporting Pregnant and Parenting Adolescents</a></h3>  
 
-        </div><!-- eo .entry-content -->
+        <p>This day-long symposium led a dialogue with experts on what works in caring for pregnant and parenting adolescents and building strong young families. This event was held in Washington, D.C. on May 18, 2011 and was presented by the Office of Population Affairs, Office of Adolescent Pregnancy Programs in collaboration with other federal and national partners. </p>
+
+      </article>
+
+    </section>
+
+    <section class="row-fluid">
+      <h2>Webinars</h2>
+
+      <% current_page.data.webinars.each do |webinar| %>
+
+        <article class="webinar row-fluid">
+          <h3>"<%= webinar.title %>"</h3>
+
+          <p>A webinar with <%= webinar.author %> on <%= webinar.date %>.</p>
+
+          <ul class="webinar-assets">
+            <% webinar.asset.each do |item| %>     
+              <% item.gsub!('%{base_url}', base_url) %>
+              <li>
+                <%= item %>
+              </li>
+            <% end %>
+          </ul><!-- eo .webinar-assets -->
+
+        </article><!-- eo .webinar -->
+
+      <p class="backtotop"><a href="#">Back to top</a></p>
+    <% end %>
+
+      
+
